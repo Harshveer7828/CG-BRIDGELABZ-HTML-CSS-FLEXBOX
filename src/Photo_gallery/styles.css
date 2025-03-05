@@ -1,6 +1,6 @@
 * {
-  box-sizing: border-box; 
-  font-family:"Bebas Neue";
+  box-sizing: border-box;
+  font-family: "Bebas Neue";
 }
 body {
   display: flex;
@@ -13,7 +13,11 @@ body {
   flex: 1;
 }
 
-header{
+html{
+  scroll-behavior: smooth;
+}
+
+header {
   color: crimson;
   font-size: 2rem;
   letter-spacing: 5px;
@@ -21,7 +25,7 @@ header{
   border-style: solid;
   border-width: 2px;
 }
-#main > gallery {
+#gallery {
   display: flex;
   flex-wrap: wrap;
   flex: 1;
@@ -33,18 +37,17 @@ header{
   overflow: auto;
 }
 
-#main > gallery::-webkit-scrollbar {
+#gallery::-webkit-scrollbar {
   display: none;
 }
 
-
-#main > gallery img{
-  height: 50%;
+#main > gallery > img {
+  height: 30vh;
   width: 30%;
   object-fit: cover;
 }
 
-#main > nav, 
+#main > nav,
 #main > aside {
   flex: 0 0 20vw;
   background: rgb(0, 0, 0);
@@ -56,13 +59,14 @@ header{
   order: -1;
 }
 
-#main > nav h3{
+#main > nav h3 {
   font-size: 2rem;
   letter-spacing: 2px;
   color: crimson;
   font-weight: 100;
 }
-header, footer {
+header,
+footer {
   background: rgb(0, 0, 0);
   height: 20vh;
   color: crimson;
@@ -72,32 +76,94 @@ header, footer {
   border-style: solid;
   border-width: 2px;
 }
-header, footer, article, nav, aside {
+header,
+footer,
+article,
+nav,
+aside {
   padding: 1em;
   color: crimson;
   font-size: 2rem;
   letter-spacing: 5px;
 }
 
-#main > nav > .links{
+#main > nav > .links {
   display: flex;
   flex-direction: column;
   text-align: left;
 }
 
-#main > nav > .links a{
+#main > nav > .links a {
   font-size: 22px;
   color: rgb(255, 255, 255);
   font-family: "Bebas Neue", sans-serif;
   letter-spacing: 3px;
-
+  text-decoration: none;
 }
 
-
-
-#main > nav > .links a:hover{
+#main > nav > .links a:hover {
   font-size: 25px;
   animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
   color: coral;
   cursor: pointer;
+}
+
+.links a span{
+  color: crimson;
+
+}
+
+/* cards css */
+#cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  align-items: center;
+  justify-content: left;
+  width: 30%;
+  height: 60vh;
+  background-color: rgba(244, 130, 7, 0.634);
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+}
+.card img {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 100%;
+}
+.card .text > button {
+  background: rgb(255, 1, 1);
+  border: 0;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+  animation-timing-function:ease;
+  animation-duration: 0.5s;
+  letter-spacing: 2px;
+}
+
+.card .text > button:hover{
+  scale: 1.2;
+
+}
+
+.text > h3{
+  font-size: 1.5rem;
+  color: crimson;
+}
+
+.text > p{
+  width: 100%;
+  font-size: 1rem;
+  color: black;
 }
