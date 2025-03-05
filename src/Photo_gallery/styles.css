@@ -100,19 +100,26 @@ aside {
   color: rgb(255, 255, 255);
   font-family: "Bebas Neue", sans-serif;
   letter-spacing: 3px;
+  animation-timing-function: linear;
   text-decoration: none;
 }
 
 #main > nav > .links a:hover {
   font-size: 25px;
-  animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
   color: coral;
   cursor: pointer;
+  letter-spacing: 0;
+
 }
 
 .links a span{
   color: crimson;
 
+}
+
+#cards-heading{
+  font-size: 5rem;
+  letter-spacing: 5px;
 }
 
 /* cards css */
