@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box; 
+  font-family:"Bebas Neue";
+}
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  margin: 0;
+}
+#main {
+  display: flex;
+  flex: 1;
+}
+
+header{
+  color: crimson;
+  font-size: 2rem;
+  letter-spacing: 5px;
+  border-color: white;
+  border-style: solid;
+  border-width: 2px;
+}
+#main > gallery {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  font-weight: 900;
+  padding: 2px 2px;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+}
+
+#main > gallery::-webkit-scrollbar {
+  display: none;
+}
+
+
+#main > gallery img{
+  height: 50%;
+  width: 30%;
+  object-fit: cover;
+}
+
+#main > nav, 
+#main > aside {
+  flex: 0 0 20vw;
+  background: rgb(0, 0, 0);
+  border-color: white;
+  border-style: solid;
+  border-width: 2px;
+}
+#main > nav {
+  order: -1;
+}
+
+#main > nav h3{
+  font-size: 2rem;
+  letter-spacing: 2px;
+  color: crimson;
+  font-weight: 100;
+}
+header, footer {
+  background: rgb(0, 0, 0);
+  height: 20vh;
+  color: crimson;
+  letter-spacing: 5px;
+  font-size: 2rem;
+  border-color: white;
+  border-style: solid;
+  border-width: 2px;
+}
+header, footer, article, nav, aside {
+  padding: 1em;
+  color: crimson;
+  font-size: 2rem;
+  letter-spacing: 5px;
+}
+
+#main > nav > .links{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+#main > nav > .links a{
+  font-size: 22px;
+  color: rgb(255, 255, 255);
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 3px;
+
+}
+
+
+
+#main > nav > .links a:hover{
+  font-size: 25px;
+  animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  color: coral;
+  cursor: pointer;
+}
