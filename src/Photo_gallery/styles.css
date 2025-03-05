@@ -55,6 +55,7 @@ header {
   border-style: solid;
   border-width: 2px;
 }
+
 #main > nav {
   order: -1;
 }
@@ -91,6 +92,7 @@ aside {
   display: flex;
   flex-direction: column;
   text-align: left;
+  position: fixed;
 }
 
 #main > nav > .links a {
@@ -166,4 +168,48 @@ aside {
   width: 100%;
   font-size: 1rem;
   color: black;
+}
+
+
+/* media cards css */
+#media{
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 5vh;
+}
+.media {
+  width: 40%;
+  display: flex;
+  align-items: flex-start;
+  background: #ff0000;
+  padding: 1em;
+  border-radius: 3px;
+  max-width: 24em;
+  box-shadow: black 2px 2px 20px 2px;
+
+}
+
+.media>img{
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+}
+.media-object {
+  margin-right: 1em;
+}
+.media-body {
+  flex: 1;
+}
+.media-body > p{
+  color: white;
+  font-weight: 100;
+}
+.media-heading {
+  margin: 0 0 .5em;
+  color: white;
+  letter-spacing: 2px;
+  font-size: 2rem;
+  font-weight: 100;
 }
